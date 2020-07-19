@@ -3,8 +3,10 @@ import { StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { Text, View } from '../components/Themed';
 import {AppLoading} from 'expo';
 import { useFonts, NunitoSans_300Light, NunitoSans_400Regular, NunitoSans_900Black } from '@expo-google-fonts/nunito-sans';
+import { useNavigation } from '@react-navigation/native';
 
 export default function LoginScreen() {
+  const navigation = useNavigation();
   let [fontsLoaded] = useFonts({
     NunitoSans_300Light,
     NunitoSans_400Regular,
@@ -25,7 +27,8 @@ else{
         <TextInput style={styles.text4}>Verify Password</TextInput>
         <TextInput style={styles.text5}>Date of Birth</TextInput>
 
-        <TouchableOpacity style={styles.login}>
+        <TouchableOpacity style={styles.login} onPress={() =>
+          navigation.navigate('OnboardingContact')}>
             <Text style={styles.text}>SIGN UP</Text>
         </TouchableOpacity>
       </View>
