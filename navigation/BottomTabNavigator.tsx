@@ -10,6 +10,10 @@ import LoginScreen from '../screens/LoginScreen';
 import OnboardingContact from '../screens/OnboardingContact';
 import OnboardingHealth from '../screens/OnboardingHealth';
 import OnboardingFeedback from '../screens/OnboardingFeedback';
+import SymptomLog from '../screens/SymptomLog';
+import SymptomLogAdditional from '../screens/SymptomLogAdditional';
+import SymptomInfo from '../screens/SymptomInfo';
+import SymptomLogFeedback from '../screens/SymptomLogFeedback';
 import { BottomTabParamList, WelcomeParamList, LoginParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
@@ -68,6 +72,26 @@ function WelcomeNavigator() {
         name="OnboardingFeedback"
         component={OnboardingFeedback}
         options={{ headerTitle: 'Account Created' }}
+      />
+      <WelcomeStack.Screen
+        name="SymptomLog"
+        component={SymptomLog}
+        options={{ headerTitle: 'Symptom Log' }}
+      />
+      <WelcomeStack.Screen
+        name="SymptomLogAdditional"
+        component={SymptomLogAdditional}
+        options={{ headerTitle: 'Symptom Log' }}
+      />
+      <WelcomeStack.Screen
+        name="SymptomInfo"
+        component={SymptomInfo}
+        options={{ headerTitle: 'Symptoms' }}
+      />
+      <WelcomeStack.Screen
+        name="SymptomLogFeedback"
+        component={SymptomLogFeedback}
+        options={{ headerTitle: 'Log Complete' }}
       />
     </WelcomeStack.Navigator>
   );
