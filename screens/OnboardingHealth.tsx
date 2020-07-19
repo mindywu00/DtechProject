@@ -64,7 +64,7 @@ export default function OnboardingHealth() {
           </View>
 
         <Text style={styles.successtext3}>Please input your medication.</Text>
-        <TextInput style={{left:35, top: 90, borderBottomWidth: 1, width: 200}}>Medication Name</TextInput>
+        <TextInput style={{left:35, top: 90, borderBottomWidth: 1, width: 200}} placeholder="Medication Name"></TextInput>
         </View>
 
         <TouchableOpacity style={styles.arrowright} onPress={() =>
