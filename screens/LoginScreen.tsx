@@ -21,11 +21,11 @@ else{
       <View>
         <Text style={styles.headertext}>APP NAME + LOGO</Text>
 
-        <TextInput style={styles.text1}>Full Name</TextInput>
-        <TextInput style={styles.text2}>Username</TextInput>
-        <TextInput style={styles.text3}>Password</TextInput>
-        <TextInput style={styles.text4}>Verify Password</TextInput>
-        <TextInput style={styles.text5}>Date of Birth</TextInput>
+        <TextInput style={styles.text1} placeholder="Full Name"></TextInput>
+        <TextInput style={styles.text2} placeholder="Username"></TextInput>
+        <TextInput style={styles.text3} placeholder="Password"></TextInput>
+        <TextInput style={styles.text4} placeholder="Verify Password"></TextInput>
+        <TextInput style={styles.text5} placeholder="Date of Birth"></TextInput>
 
         <TouchableOpacity style={styles.login} onPress={() =>
           navigation.navigate('OnboardingContact')}>
