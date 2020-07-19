@@ -9,6 +9,10 @@ export default {
           Welcome: {
             screens: {
               WelcomeScreen: 'one',
+              LoginScreem: 'two',
+              OnboardingContact: 'three',
+              OnboardingHealth: 'four',
+              OnboardingFeedbacl: 'five',
             },
           },
           Login: {

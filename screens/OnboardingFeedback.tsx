@@ -5,7 +5,7 @@ import { AppLoading } from 'expo';
 import { useFonts, NunitoSans_300Light, NunitoSans_400Regular, NunitoSans_900Black } from '@expo-google-fonts/nunito-sans';
 import { useNavigation } from '@react-navigation/native';
 
-export default function LoginScreen() {
+export default function OnboardingFeedback() {
   const navigation = useNavigation();
   let [fontsLoaded] = useFonts({
     NunitoSans_300Light,
@@ -19,14 +19,11 @@ export default function LoginScreen() {
     return (
       <View>
         <Text style={styles.headertext}>APP NAME + LOGO</Text>
-        <TextInput style={styles.text1} placeholder="Full Name"></TextInput>
-        <TextInput style={styles.text2} placeholder="Username"></TextInput>
-        <TextInput style={styles.text3} placeholder="Password"></TextInput>
-        <TextInput style={styles.text4} placeholder=" Verify Password"></TextInput>
-        <TextInput style={styles.text5} placeholder="Date of Birth"></TextInput>
-        <TouchableOpacity style={styles.signup} onPress={() =>
-          navigation.navigate('OnboardingContact')}>
-            <Text style={styles.text}>SIGNUP</Text>
+        <TouchableOpacity style={styles.login}>
+            <Text style={styles.text}>EXPLORE THE APP</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.signup}>
+            <Text style={styles.text}>START LOGGING SYMPTOMS</Text>
         </TouchableOpacity>
       </View>
   );
@@ -109,22 +106,7 @@ const styles = StyleSheet.create({
     lineHeight: 18.75,
     color: '#4F4F4F',
   },
-  text5: {
-    position: 'absolute',
-    width: 200,
-    height: 18.75,
-    left: 90,
-    borderBottomWidth: .75,
-    borderBottomColor: '#4F4F4F',
-    top: 320,
-    fontFamily: 'NunitoSans_300Light',
-    fontStyle: 'normal',
-    fontWeight: '600',
-    fontSize: 13.5,
-    lineHeight: 18.75,
-    color: '#4F4F4F',
-  },
-  signup: {
+  login: {
     position: 'absolute',
     width: 210,
     height: 41.25,
@@ -144,5 +126,18 @@ const styles = StyleSheet.create({
     fontStyle: 'normal',
     fontWeight: '600',
     fontSize: 13.5,
-  }
+  },
+  signup: {
+    position: 'absolute',
+    width: 96,
+    height: 41.25,
+    left: 0,
+    top: 450,
+    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: 0,
+    borderTopRightRadius: 22.5,
+    borderBottomRightRadius: 22.5,
+    alignItems: 'center',
+    backgroundColor: '#C4C4C4',
+  },
 });
