@@ -18,6 +18,7 @@ export type WelcomeParamList = {
   SymptomLogAdditional: undefined;
   SymptomInfo: undefined;
   SymptomLogFeedback: undefined;
+  Profile: undefined;
 };
 
 export type LoginParamList = {

@@ -14,6 +14,7 @@ import SymptomLog from '../screens/SymptomLog';
 import SymptomLogAdditional from '../screens/SymptomLogAdditional';
 import SymptomInfo from '../screens/SymptomInfo';
 import SymptomLogFeedback from '../screens/SymptomLogFeedback';
+import Profile from '../screens/Profile';
 import { BottomTabParamList, WelcomeParamList, LoginParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
@@ -92,6 +93,11 @@ function WelcomeNavigator() {
         name="SymptomLogFeedback"
         component={SymptomLogFeedback}
         options={{ headerTitle: 'Log Complete' }}
+      />
+      <WelcomeStack.Screen
+        name="Profile"
+        component={Profile}
+        options={{ headerTitle: 'Profile' }}
       />
     </WelcomeStack.Navigator>
   );

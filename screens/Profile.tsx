@@ -23,7 +23,7 @@ export default function Profile() {
         <TouchableOpacity style={styles.circle}></TouchableOpacity>
         <Text style={styles.name}>Susan Johnson</Text>
         <Text style={styles.username}>@susanj</Text>
-        <View style={{top: 521, width:354, height: 174, left:30}}>
+        <View style={{top: 330, width:300, height: 174, left:30}}>
             <Text style={styles.text1}>Medication Reminders</Text>
           <View style={{flexDirection: 'row'}}>
             <RadioButton
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 149,
     height: 30,
-    left: 133,
+    left: 127,
     top: 255,
     fontFamily: 'NunitoSans_300Light',
     fontStyle: 'normal',
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 61,
     height: 22,
-    left: 177,
+    left: 160,
     top: 289,
     fontFamily: 'NunitoSans_300Light',
     fontStyle: 'normal',
@@ -101,8 +101,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 120,
     height: 120,
-    left: 147,
-    top: 115,
+    left: 130,
+    top: 100,
     borderRadius: 100,
     backgroundColor: '#C4C4C4',
   },
