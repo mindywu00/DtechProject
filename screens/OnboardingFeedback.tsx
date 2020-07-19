@@ -23,7 +23,8 @@ export default function OnboardingFeedback() {
         <TouchableOpacity style={styles.login}>
             <Text style={styles.text}>EXPLORE THE APP</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.signup}>
+        <TouchableOpacity style={styles.signup} onPress={() =>
+          navigation.navigate('SymptomLog')}>
             <Text style={styles.text}>START LOGGING SYMPTOMS</Text>
         </TouchableOpacity>
       </View>

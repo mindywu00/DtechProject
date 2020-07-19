@@ -14,6 +14,10 @@ export type WelcomeParamList = {
   OnboardingContact: undefined;
   OnboardingFeedback: undefined;
   OnboardingHealth: undefined;
+  SymptomLog: undefined;
+  SymptomLogAdditional: undefined;
+  SymptomInfo: undefined;
+  SymptomLogFeedback: undefined;
 };
 
 export type LoginParamList = {

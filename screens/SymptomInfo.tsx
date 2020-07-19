@@ -21,18 +21,15 @@ export default function SymptomInfo() {
       <View>
         <Text style={styles.headertext}>UNDERSTAND YOUR SYMPTOMS</Text>
         <Text style={styles.headertext2}>Fatigue</Text>
-        <Text style={styles.headertext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et in sagittis, ornare amet quis vitae porttitor gravida. Ut dignissim eleifend.</Text>
+        <Text style={styles.generic}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et in sagittis, ornare amet quis vitae porttitor gravida. Ut dignissim eleifend.</Text>
         <Text style={styles.headertext3}>Headache</Text>
-        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et in sagittis, ornare amet quis vitae porttitor gravida. Ut dignissim eleifend.</Text>
+        <Text style={styles.generic1}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et in sagittis, ornare amet quis vitae porttitor gravida. Ut dignissim eleifend.</Text>
         <Text style={styles.headertext4}>Weight Loss</Text>
-        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et in sagittis, ornare amet quis vitae porttitor gravida. Ut dignissim eleifend.</Text>
-        <Text style={styles.headertext4}>Blood Sugar</Text>
-        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et in sagittis, ornare amet quis vitae porttitor gravida. Ut dignissim eleifend.</Text>
+        <Text style={styles.generic2}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et in sagittis, ornare amet quis vitae porttitor gravida. Ut dignissim eleifend.</Text>
+        <Text style={styles.headertext5}>Blood Sugar</Text>
+        <Text style={styles.generic3}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et in sagittis, ornare amet quis vitae porttitor gravida. Ut dignissim eleifend.</Text>
         <TouchableOpacity style={styles.arrowright} onPress={() =>
-          navigation.navigate('OnboardingHealth')}>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.arrowleft} onPress={() =>
-          navigation.navigate('LoginScreen')}>
+          navigation.navigate('SymptomLogFeedback')}>
         </TouchableOpacity>
       </View>
   );
@@ -45,7 +42,7 @@ const styles = StyleSheet.create({
     width: 243,
     height: 87.75,
     left: 70,
-    top: 50,
+    top: 35,
     fontFamily: 'NunitoSans_300Light',
     fontStyle: 'normal',
     fontWeight: '600',
@@ -78,72 +75,12 @@ const styles = StyleSheet.create({
     borderColor: '#828282',
     transform: [{ rotate: '45deg' }],
   },
-  text1: {
-    position: 'absolute',
-    width: 200,
-    height: 18.75,
-    left: 90,
-    borderBottomWidth: 1,
-    borderBottomColor: '#4F4F4F',
-    top: 145,
-    fontFamily: 'NunitoSans_300Light',
-    fontStyle: 'normal',
-    fontWeight: '600',
-    fontSize: 13.5,
-    lineHeight: 18.75,
-    color: '#4F4F4F',
-  },
-  text2: {
-    position: 'absolute',
-    width: 200,
-    height: 18.75,
-    left: 90,
-    borderBottomWidth: .75,
-    borderBottomColor: '#4F4F4F',
-    top: 180,
-    fontFamily: 'NunitoSans_300Light',
-    fontStyle: 'normal',
-    fontWeight: '600',
-    fontSize: 13.5,
-    lineHeight: 18.75,
-    color: '#4F4F4F',
-  },
-  successtext: {
-    position: 'absolute',
-    width: 243,
-    height: 87.75,
-    left: 75,
-    top: 80,
-    fontFamily: 'NunitoSans_300Light',
-    fontStyle: 'normal',
-    fontWeight: '600',
-    fontSize: 13,
-    lineHeight: 22.5,
-    textAlign: 'center',
-    color: '#4F4F4F',
-    marginTop: 10,
-  },
-  successtext2: {
-    position: 'absolute',
-    width: 243,
-    height: 87.75,
-    left: 75,
-    top: 200,
-    fontFamily: 'NunitoSans_300Light',
-    fontStyle: 'normal',
-    fontWeight: '600',
-    fontSize: 13,
-    lineHeight: 22.5,
-    textAlign: 'center',
-    color: '#4F4F4F',
-    marginTop: 10,
-  },
   headertext2: {
     position: 'absolute',
     width: 243,
     height: 87.75,
     left: 70,
-    top: 50,
+    top: 100,
     fontFamily: 'NunitoSans_900Black',
     fontStyle: 'normal',
     fontWeight: '600',
@@ -157,7 +94,7 @@ const styles = StyleSheet.create({
     width: 243,
     height: 87.75,
     left: 70,
-    top: 50,
+    top: 210,
     fontFamily: 'NunitoSans_900Black',
     fontStyle: 'normal',
     fontWeight: '600',
@@ -171,7 +108,7 @@ const styles = StyleSheet.create({
     width: 243,
     height: 87.75,
     left: 70,
-    top: 50,
+    top: 320,
     fontFamily: 'NunitoSans_900Black',
     fontStyle: 'normal',
     fontWeight: '600',
@@ -185,7 +122,7 @@ const styles = StyleSheet.create({
     width: 243,
     height: 87.75,
     left: 70,
-    top: 50,
+    top: 430,
     fontFamily: 'NunitoSans_900Black',
     fontStyle: 'normal',
     fontWeight: '600',
@@ -194,4 +131,61 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#4F4F4F',
   },
+  generic: {
+    position: 'absolute',
+    width: 243,
+    height: 87.75,
+    left: 70,
+    top: 125,
+    fontFamily: 'NunitoSans_300Light',
+    fontStyle: 'normal',
+    fontWeight: '600',
+    fontSize: 12,
+    lineHeight: 18,
+    textAlign: 'center',
+    color: '#4F4F4F',
+  },
+  generic1: {
+    position: 'absolute',
+    width: 243,
+    height: 87.75,
+    left: 70,
+    top: 230,
+    fontFamily: 'NunitoSans_300Light',
+    fontStyle: 'normal',
+    fontWeight: '600',
+    fontSize: 12,
+    lineHeight: 18,
+    textAlign: 'center',
+    color: '#4F4F4F',
+  },
+  generic2: {
+    position: 'absolute',
+    width: 243,
+    height: 87.75,
+    left: 70,
+    top: 340,
+    fontFamily: 'NunitoSans_300Light',
+    fontStyle: 'normal',
+    fontWeight: '600',
+    fontSize: 12,
+    lineHeight: 18,
+    textAlign: 'center',
+    color: '#4F4F4F',
+  },
+  generic3: {
+    position: 'absolute',
+    width: 243,
+    height: 87.75,
+    left: 70,
+    top: 450,
+    fontFamily: 'NunitoSans_300Light',
+    fontStyle: 'normal',
+    fontWeight: '600',
+    fontSize: 12,
+    lineHeight: 18,
+    textAlign: 'center',
+    color: '#4F4F4F',
+  },
+
 });
