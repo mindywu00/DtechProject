@@ -4,7 +4,7 @@ import { Text, View } from '../components/Themed';
 import { AppLoading } from 'expo';
 import { useFonts, NunitoSans_300Light, NunitoSans_400Regular, NunitoSans_900Black } from '@expo-google-fonts/nunito-sans';
 import { useNavigation } from '@react-navigation/native';
-import { transform } from '@babel/core';
+import { RadioButton } from 'react-native-paper';
 
 export default function OnboardingContact() {
   const navigation = useNavigation();
@@ -13,7 +13,7 @@ export default function OnboardingContact() {
     NunitoSans_400Regular,
     NunitoSans_900Black,
   });
-
+  const [checked, setChecked] = React.useState('first')
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
@@ -24,7 +24,44 @@ export default function OnboardingContact() {
         <TextInput style={styles.text1} placeholder="Full Name"></TextInput>
         <TextInput style={styles.text2} placeholder="Username"></TextInput>
         <Text style={styles.successtext2}>Please select your preferred contact method.</Text>
+        <View style={{top: 270, width:250, height: 75, left:70, opacity: .45}}>
+          <View style={{flexDirection: 'row'}}>
+            <RadioButton
+              value="E-mail"
+              status={ checked === 'E-mail' ? 'checked' : 'unchecked' }
+              onPress={() => setChecked('E-mail')}
+            />
+            <Text style={{paddingTop: 10}}>E-mail</Text>
+          </View>
+          <View style={{flexDirection: 'row'}}>
+            <RadioButton
+              value="Phone Number"
+              status={ checked === 'Phone Number' ? 'checked' : 'unchecked' }
+              onPress={() => setChecked('PhoneNumber')}
+            />
+            <Text style={{paddingTop: 10}}>Phone Number</Text>
+          </View>
+        </View>
         <Text style={styles.headertext2}>EMERGENCY CONTACTS</Text>
+        <Text style={styles.successtext3}>Add emergency contacts to send alerts to. You can manage contacts & alerts from your profile.</Text>
+        <View style={{top: 390, width:250, height: 75, left:70, opacity: .45}}>
+          <View style={{flexDirection: 'row'}}>
+            <RadioButton
+              value="Add now"
+              status={ checked === 'Add now' ? 'checked' : 'unchecked' }
+              onPress={() => setChecked('Add now')}
+            />
+            <Text style={{paddingTop: 10}}>Add now</Text>
+          </View>
+          <View style={{flexDirection: 'row'}}>
+            <RadioButton
+              value="Save for later"
+              status={ checked === 'Save for later' ? 'checked' : 'unchecked' }
+              onPress={() => setChecked('Save for later')}
+            />
+            <Text style={{paddingTop: 10}}>Save for later</Text>
+          </View>
+        </View>
         <TouchableOpacity style={styles.arrowright} onPress={() =>
           navigation.navigate('OnboardingHealth')}>
         </TouchableOpacity>
@@ -39,10 +76,10 @@ export default function OnboardingContact() {
 const styles = StyleSheet.create({
   headertext: {
     position: 'absolute',
-    width: 243,
-    height: 87.75,
-    left: 70,
-    top: 50,
+    width: 400,
+    height: 500,
+    left: 0,
+    top: 0,
     fontFamily: 'NunitoSans_300Light',
     fontStyle: 'normal',
     fontWeight: '600',
@@ -50,13 +87,15 @@ const styles = StyleSheet.create({
     lineHeight: 22.5,
     textAlign: 'center',
     color: '#4F4F4F',
+    backgroundColor: '#f2f2f2',
+    paddingTop: 30
   },
   headertext2: {
     position: 'absolute',
     width: 243,
     height: 87.75,
     left: 70,
-    top: 300,
+    top: 370,
     fontFamily: 'NunitoSans_300Light',
     fontStyle: 'normal',
     fontWeight: '600',
@@ -96,7 +135,7 @@ const styles = StyleSheet.create({
     left: 90,
     borderBottomWidth: 1,
     borderBottomColor: '#4F4F4F',
-    top: 145,
+    top: 130,
     fontFamily: 'NunitoSans_300Light',
     fontStyle: 'normal',
     fontWeight: '600',
@@ -111,7 +150,7 @@ const styles = StyleSheet.create({
     left: 90,
     borderBottomWidth: .75,
     borderBottomColor: '#4F4F4F',
-    top: 180,
+    top: 170,
     fontFamily: 'NunitoSans_300Light',
     fontStyle: 'normal',
     fontWeight: '600',
@@ -124,7 +163,7 @@ const styles = StyleSheet.create({
     width: 243,
     height: 87.75,
     left: 75,
-    top: 80,
+    top: 60,
     fontFamily: 'NunitoSans_300Light',
     fontStyle: 'normal',
     fontWeight: '600',
@@ -139,7 +178,22 @@ const styles = StyleSheet.create({
     width: 243,
     height: 87.75,
     left: 75,
-    top: 200,
+    top: 210,
+    fontFamily: 'NunitoSans_300Light',
+    fontStyle: 'normal',
+    fontWeight: '600',
+    fontSize: 13,
+    lineHeight: 22.5,
+    textAlign: 'center',
+    color: '#4F4F4F',
+    marginTop: 10,
+  },
+  successtext3: {
+    position: 'absolute',
+    width: 243,
+    height: 87.75,
+    left: 75,
+    top: 385,
     fontFamily: 'NunitoSans_300Light',
     fontStyle: 'normal',
     fontWeight: '600',
