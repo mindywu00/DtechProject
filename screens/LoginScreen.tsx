@@ -132,7 +132,7 @@ else{
       height: 41.25,
       left: 80,
       top: 365,
-      backgroundColor: '#C4C4C4',
+      backgroundColor: '#7BA9A9',
       shadowOffset: {width: 0, height: 1.5},
       shadowRadius: 4,
       color: '#000000',

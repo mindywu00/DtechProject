@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     height: 41.25,
     left: 80,
     top: 365,
-    backgroundColor: '#C4C4C4',
+    backgroundColor: '#7BA9A9',
     shadowOffset: {width: 0, height: 1.5},
     shadowRadius: 4,
     color: '#000000',
@@ -89,6 +89,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 22.5,
     borderBottomRightRadius: 22.5,
     alignItems: 'center',
-    backgroundColor: '#C4C4C4',
+    backgroundColor: '#E76F51',
   },
 });

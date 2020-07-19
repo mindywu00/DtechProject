@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { AppLoading } from 'expo';
 import { useFonts, NunitoSans_300Light, NunitoSans_400Regular, NunitoSans_900Black } from '@expo-google-fonts/nunito-sans';
@@ -17,15 +17,22 @@ export default function SymptomLogFeedback() {
     return <AppLoading />;
   } else {
     return (
-      <View>
+      <View style={styles.container}>
         <TouchableOpacity style={styles.circle}></TouchableOpacity>
         <Text style={styles.successtext}>You've successfully submitted your symptoms for today!</Text>
+        <TouchableOpacity style={styles.profile} onPress={() =>
+          navigation.navigate('Profile')}>
+          <Text style={styles.text}>Home</Text>
+        </TouchableOpacity>
       </View>
-  );
+    );
   }
 }
 
 const styles = StyleSheet.create({
+  container: {
+    color: '#bcd9d7'
+  },
   successtext: {
     position: 'absolute',
     width: 243,
@@ -49,5 +56,26 @@ const styles = StyleSheet.create({
     top: 80,
     borderRadius: 100,
     backgroundColor: '#C4C4C4',
-  }
+  },
+  text: {
+    marginTop: 10,
+    fontFamily: 'NunitoSans_300Light',
+    fontStyle: 'normal',
+    fontWeight: '600',
+    fontSize: 13.5,
+  },
+  profile: {
+    position: 'absolute',
+    width: 210,
+    height: 41.25,
+    left: 90,
+    top: 500,
+    backgroundColor: '#7BA9A9',
+    color: '#7BA9A9',
+    shadowOffset: {width: 0, height: 1.5},
+    shadowRadius: 4,
+    alignItems: 'center',
+    shadowOpacity: .15,
+    borderRadius: 22.5,
+  },
 });
