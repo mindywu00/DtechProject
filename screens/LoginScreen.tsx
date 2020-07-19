@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import {AppLoading} from 'expo';
 import { useFonts, NunitoSans_300Light, NunitoSans_400Regular, NunitoSans_900Black } from '@expo-google-fonts/nunito-sans';
@@ -30,10 +28,8 @@ else{
         <TouchableOpacity style={styles.login}>
             <Text style={styles.text}>SIGN UP</Text>
         </TouchableOpacity>
-
       </View>
-  )
-}
+  )}
 }
 
   const styles = StyleSheet.create({

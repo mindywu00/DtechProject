@@ -10,6 +10,10 @@ export type BottomTabParamList = {
 
 export type WelcomeParamList = {
   WelcomeScreen: undefined;
+  LoginScreen: undefined;
+  OnboardingContact: undefined;
+  OnboardingFeedback: undefined;
+  OnboardingHealth: undefined;
 };
 
 export type LoginParamList = {

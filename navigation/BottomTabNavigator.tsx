@@ -7,6 +7,9 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import WelcomeScreen from '../screens/WelcomeScreen';
 import LoginScreen from '../screens/LoginScreen';
+import OnboardingContact from '../screens/OnboardingContact';
+import OnboardingHealth from '../screens/OnboardingHealth';
+import OnboardingFeedback from '../screens/OnboardingFeedback';
 import { BottomTabParamList, WelcomeParamList, LoginParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
@@ -21,13 +24,6 @@ export default function BottomTabNavigator() {
       <BottomTab.Screen
         name="Welcome"
         component={WelcomeNavigator}
-        options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="Login"
-        component={LoginNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
@@ -51,22 +47,28 @@ function WelcomeNavigator() {
       <WelcomeStack.Screen
         name="WelcomeScreen"
         component={WelcomeScreen}
-        options={{ headerTitle: 'Welcome Title' }}
+        options={{ headerTitle: 'Log In' }}
       />
-    </WelcomeStack.Navigator>
-  );
-}
-
-const LoginStack = createStackNavigator<LoginParamList>();
-
-function LoginNavigator() {
-  return (
-    <LoginStack.Navigator>
-      <LoginStack.Screen
+      <WelcomeStack.Screen
         name="LoginScreen"
         component={LoginScreen}
-        options={{ headerTitle: 'Login Title' }}
+        options={{ headerTitle: 'Sign Up' }}
       />
-    </LoginStack.Navigator>
+      <WelcomeStack.Screen
+        name="OnboardingContact"
+        component={OnboardingContact}
+        options={{ headerTitle: 'Contact' }}
+      />
+      <WelcomeStack.Screen
+        name="OnboardingHealth"
+        component={OnboardingHealth}
+        options={{ headerTitle: 'Health' }}
+      />
+      <WelcomeStack.Screen
+        name="OnboardingFeedback"
+        component={OnboardingFeedback}
+        options={{ headerTitle: 'Account Created' }}
+      />
+    </WelcomeStack.Navigator>
   );
 }
