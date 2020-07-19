@@ -5,7 +5,7 @@ import { AppLoading } from 'expo';
 import { useFonts, NunitoSans_300Light, NunitoSans_400Regular, NunitoSans_900Black } from '@expo-google-fonts/nunito-sans';
 import { useNavigation } from '@react-navigation/native';
 
-export default function OnboardingFeedback() {
+export default function SymptomLogFeedback() {
   const navigation = useNavigation();
   let [fontsLoaded] = useFonts({
     NunitoSans_300Light,
@@ -19,13 +19,7 @@ export default function OnboardingFeedback() {
     return (
       <View>
         <TouchableOpacity style={styles.circle}></TouchableOpacity>
-        <Text style={styles.successtext}>You've successfully created your account!</Text>
-        <TouchableOpacity style={styles.login}>
-            <Text style={styles.text}>EXPLORE THE APP</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.signup}>
-            <Text style={styles.text}>START LOGGING SYMPTOMS</Text>
-        </TouchableOpacity>
+        <Text style={styles.successtext}>You've successfully submitted your symptoms for today!</Text>
       </View>
   );
   }
@@ -55,39 +49,5 @@ const styles = StyleSheet.create({
     top: 80,
     borderRadius: 100,
     backgroundColor: '#C4C4C4',
-  },
-  login: {
-    position: 'absolute',
-    width: 210,
-    height: 41.25,
-    left: 80,
-    top: 365,
-    backgroundColor: '#C4C4C4',
-    shadowOffset: {width: 0, height: 1.5},
-    shadowRadius: 4,
-    color: '#000000',
-    alignItems: 'center',
-    shadowOpacity: .15,
-    borderRadius: 22.5,
-  },
-  text: {
-    marginTop: 10,
-    fontFamily: 'NunitoSans_300Light',
-    fontStyle: 'normal',
-    fontWeight: '600',
-    fontSize: 13.5,
-  },
-  signup: {
-    position: 'absolute',
-    width: 210,
-    height: 41.25,
-    left: 0,
-    top: 450,
-    borderTopLeftRadius: 0,
-    borderBottomLeftRadius: 0,
-    borderTopRightRadius: 22.5,
-    borderBottomRightRadius: 22.5,
-    alignItems: 'center',
-    backgroundColor: '#C4C4C4',
-  },
+  }
 });
